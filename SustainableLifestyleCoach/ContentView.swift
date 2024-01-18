@@ -17,7 +17,7 @@ struct ContentView: View {
                     .foregroundColor(.primary)
 
                 // Description of the App
-                Text("Empowering you to live a more sustainable life with tips, product recommendations .................")
+                Text("Empowering you to live a more sustainable life")
                     .font(.subheadline)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 20)
@@ -31,7 +31,7 @@ struct ContentView: View {
                                 .foregroundColor(.white)
                                 .font(.system(size: 16)) // Adjust font size
                                 .frame(width: 135, height: 160) // Set fixed size
-                                .background(Color.green.opacity(0.7)) // Light gray background
+                                .background(Color.green.opacity(0.7)) // Light green background
                                 .cornerRadius(15)
                                 .multilineTextAlignment(.center) // Center align the text
                         }
@@ -41,7 +41,7 @@ struct ContentView: View {
                                 .foregroundColor(.white)
                                 .font(.system(size: 16)) // Adjust font size
                                 .frame(width: 135, height: 160) // Set fixed size
-                                .background(Color.green.opacity(0.7)) // Light gray background
+                                .background(Color.green.opacity(0.7)) // Light green background
                                 .cornerRadius(15)
                                 .multilineTextAlignment(.center) // Center align the text
                         }
@@ -51,7 +51,7 @@ struct ContentView: View {
                                 .foregroundColor(.white)
                                 .font(.system(size: 16)) // Adjust font size
                                 .frame(width: 135, height: 160) // Set fixed size
-                                .background(Color.green.opacity(0.7)) // Light gray background
+                                .background(Color.green.opacity(0.7)) // Light green background
                                 .cornerRadius(15)
                                 .multilineTextAlignment(.center) // Center align the text
                         }
