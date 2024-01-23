@@ -13,6 +13,7 @@
 		FB51D0F02B5742FA00158CBC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB51D0EF2B5742FA00158CBC /* Preview Assets.xcassets */; };
 		FB51D0F92B57FC6A00158CBC /* CarbonFootprintCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB51D0F82B57FC6A00158CBC /* CarbonFootprintCalculatorView.swift */; };
 		FB51D0FC2B580A2400158CBC /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = FB51D0FB2B580A2400158CBC /* SwiftUICharts */; };
+		FB51D1012B59C04000158CBC /* WaterUseageCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB51D1002B59C04000158CBC /* WaterUseageCalculatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		FB51D0EC2B5742FA00158CBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB51D0EF2B5742FA00158CBC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FB51D0F82B57FC6A00158CBC /* CarbonFootprintCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonFootprintCalculatorView.swift; sourceTree = "<group>"; };
+		FB51D0FD2B59B8F800158CBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FB51D1002B59C04000158CBC /* WaterUseageCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterUseageCalculatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +58,8 @@
 		FB51D0E72B5742F700158CBC /* SustainableLifestyleCoach */ = {
 			isa = PBXGroup;
 			children = (
+				FB51D0FD2B59B8F800158CBC /* Info.plist */,
+				FB51D1002B59C04000158CBC /* WaterUseageCalculatorView.swift */,
 				FB51D0F82B57FC6A00158CBC /* CarbonFootprintCalculatorView.swift */,
 				FB51D0E82B5742F700158CBC /* SustainableLifestyleCoachApp.swift */,
 				FB51D0EA2B5742F700158CBC /* ContentView.swift */,
@@ -148,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB51D1012B59C04000158CBC /* WaterUseageCalculatorView.swift in Sources */,
 				FB51D0EB2B5742F700158CBC /* ContentView.swift in Sources */,
 				FB51D0E92B5742F700158CBC /* SustainableLifestyleCoachApp.swift in Sources */,
 				FB51D0F92B57FC6A00158CBC /* CarbonFootprintCalculatorView.swift in Sources */,
@@ -284,8 +290,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SustainableLifestyleCoach/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SustainableLifestyleCoach/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -312,8 +320,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SustainableLifestyleCoach/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SustainableLifestyleCoach/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
