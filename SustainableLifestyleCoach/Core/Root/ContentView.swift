@@ -1,59 +1,75 @@
-// ContentView.swift
-// SustainableLifestyleCoach
+//  ContentView.swift
+//  SustainableLifestyleCoach
 //
-// Created by Jonny Walker on 16/01/2024.
-// ContentView.swift
+//  Created by Jonny Walker on 16/01/2024.
+//
+
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var viewModel: AuthViewModel
+    
     var body: some View {
-        //This is a container that provides navigation interface for all of the content inside it
-        NavigationView {
-            // This meants Vertical stack so that the container stacks the child views vertically
-            VStack {
-                
-                // Main app text for the home page with styling
-                Text("Welcome to Your Sustainable Lifestyle")
-                    .font(.largeTitle)
-                    .multilineTextAlignment(.center)
-                    .padding(.vertical, 20)
-                    .foregroundColor(.primary)
-                
-                // Headline text for the homepage with styling
-                Text("Empowering you to live a more sustainable life")
-                    .font(.headline)
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal, 20)
-                    .foregroundColor(.secondary)
-                
-                // This means horizontal stack so that the buttons are stacked horizontally
-                HStack(spacing: 20) {
-                    //Navigation links are used for the buttons to bring the user to the correct destination when the button is clicked
-                    NavigationLink(destination: CarbonFootprintView()) {
-                        ButtonCardView(title: "Carbon Footprint Tracker", imageName: "leaf.fill")
+        Group {
+            if viewModel.userSession != nil {
+                //This is a container that provides navigation interface for all of the content inside it
+                NavigationView {
+                    // This means Vertical stack so that the container stacks the child views vertically
+                    VStack {
+                        // Main app text for the home page with styling
+                        Text("Welcome to Your Sustainable Lifestyle")
+                            .font(.largeTitle)
+                            .multilineTextAlignment(.center)
+                            .padding(.vertical, 20)
+                            .foregroundColor(.primary)
+                        
+                        // Headline text for the homepage with styling
+                        Text("Empowering you to live a more sustainable life")
+                            .font(.headline)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal, 20)
+                            .foregroundColor(.secondary)
+                        
+                        // This means horizontal stack so that the buttons are stacked horizontally
+                        HStack(spacing: 20) {
+                            // Navigation links are used for the buttons to bring the user to the correct destination when the button is clicked
+                            NavigationLink(destination: CarbonFootprintView()) {
+                                ButtonCardView(title: "Carbon Footprint Tracker", imageName: "leaf.fill")
+                            }
+                            NavigationLink(destination: WaterUseageTracker()) {
+                                ButtonCardView(title: "Water Usage Tracker", imageName: "drop.fill")
+                            }
+                        }
+                        .padding()
+                        
+                        HStack(spacing: 20) {
+                            NavigationLink(destination: EcoFriendlyProducts()) {
+                                ButtonCardView(title: "Product Recommendations", imageName: "cart.fill")
+                            }
+                            NavigationLink(destination: GreenLivingTips()) {
+                                ButtonCardView(title: "Green Living Tips", imageName: "leaf.arrow.triangle.circlepath")
+                            }
+                        }
+                        .padding()
+                        
+                        Spacer()
                     }
-                    NavigationLink(destination: WaterUseageTracker()) {
-                        ButtonCardView(title: "Water Usage Tracker", imageName: "drop.fill")
-                    }
+                    // The text that will be at the very top of the app in the navigation bar
+                    .navigationBarTitle("EcoLife Coach", displayMode: .inline)
+                    .background(Color(UIColor.systemBackground))
+                    .navigationBarItems(trailing:
+                                            HStack {
+                        NavigationLink(destination: profileView()) {
+                            Image(systemName: "person.circle")
+                                .font(.system(size: 24))
+                                .foregroundColor(.primary)
+                                .padding()
+                        }
+                    })
                 }
-                .padding()
-                
-                HStack(spacing: 20) {
-                    NavigationLink(destination: EcoFriendlyProducts()) {
-                        ButtonCardView(title: "Product Recommendations", imageName: "cart.fill")
-                    }
-                    NavigationLink(destination: GreenLivingTips()) {
-                    ButtonCardView(title: "Green Living Tips", imageName: "leaf.arrow.triangle.circlepath")
-                }
-                }
-                .padding()
-                
-                
-                Spacer()
+            } else {
+                LoginView()
             }
-            //The text that will be at the very top of the app in the navigation bar
-            .navigationBarTitle("EcoLife Coach", displayMode: .inline)
-            .background(Color(UIColor.systemBackground))
         }
     }
 }
@@ -155,5 +171,6 @@ struct GreenLivingTips: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(AuthViewModel())
     }
 }

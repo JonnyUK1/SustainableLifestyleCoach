@@ -1,0 +1,47 @@
+# Xcode
+##
+## gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+## macOS
+.DS_Store
+
+## macOS
+.DS_Store
+##
+## Xcode
+##
+build/
+DerivedData/
+*.hmap
+*.ipa
+*.xccheckout
+*.xcworkspace
+xcuserdata/
+
+
+## Xcode
+##
+xcuserdata/
+*.xccheckout
+*.xcworkspace
+*.xcuserstate
+
+# CocoaPods
+/Pods/
+/Podfile.lock
+/!Pods/Manifest.lock
+/Pods/Manifest.lock
+**/Pods.xcodeproj
+**/Podfile.lock
+
+# Carthage
+/Carthage/Build/
+
+# fastlane
+/fastlane/report.xml
+/fastlane/Preview.html
+/fastlane/screenshots/
+/fastlane/test_output/
+
+# Firebase
+GoogleService-Info.plist
